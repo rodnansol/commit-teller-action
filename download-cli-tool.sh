@@ -12,4 +12,4 @@ else
     VERSION=${VERSION#?}
 fi
 
-wget https://github.com/rodnansol/cli-app-template/releases/download/${TAG}/cli-app-cli-${VERSION}.jar -O cli-app.jar
+wget https://github.com/rodnansol/commit-teller/releases/download/${TAG}/commit-teller-cli-${VERSION}.jar -O cli-app.jar
