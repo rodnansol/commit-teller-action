@@ -21,7 +21,7 @@ jobs:
       - uses: rodnansol/commit-teller-action@v0.1.0
         name: Create story
         env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_NUMBER: ${{ github.event.number }}
           COMMIT_TELLER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_TELLER_OPENAI_API_KEY: ${{ secrets.OPENAI_KEY }}
         with:
@@ -30,7 +30,7 @@ jobs:
       - name: Commit story changes
         shell: bash
         env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_NUMBER: ${{ github.event.number }}
         run: |
           git add *.adoc
           git config --global user.email "${{ secrets.COMMITTER_EMAIL }}"
